@@ -6,3 +6,4 @@
 
 *.bin
 *.bak
+.DS_Store
