@@ -8,7 +8,7 @@
 				"launch year": 1989,
 				"name": "Atari Lynx",
 			}
-			"year": 1989,
+			"year": "1989",
 		},
 		{
 			"title": "Chip's Challenge 2",
@@ -17,7 +17,7 @@
 				"launch year": 2003,
 				"name": "Steam",
 			}
-			"year": 2015,
+			"year": "2015",
 		},
 		{
 			"title": "Bendy and the Ink Machine",
@@ -26,7 +26,7 @@
 				"launch year": 2017,
 				"name": "Steam",
 			}
-			"year": 2024,
+			"year": "2024",
 		}
 	]
 		
