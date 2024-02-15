@@ -1,0 +1,21 @@
+{
+	"ccLevel":
+	[
+		{
+			"level_number": 1,
+			"time": 1,
+			"num_chips": 1,
+			"upper_layer": [],
+			"lower_layer": [],
+			"optional_fields":[]
+		},
+		{
+			"level_number": 1,
+			"time": 1,
+			"num_chips": 1,
+			"upper_layer": [],
+			"lower_layer": [],
+			"optional_fields":[]
+		}
+	]
+}
