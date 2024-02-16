@@ -1,5 +1,5 @@
 {
-	"ccLevel":
+	"ccLevels":
 	[
 		{
 			"level_number": 1,
@@ -10,7 +10,7 @@
 			"optional_fields":[]
 		},
 		{
-			"level_number": 1,
+			"level_number": 2,
 			"time": 1,
 			"num_chips": 1,
 			"upper_layer": [],
