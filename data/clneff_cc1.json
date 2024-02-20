@@ -7,7 +7,21 @@
 			"num_chips": 1,
 			"upper_layer": [],
 			"lower_layer": [],
-			"optional_fields":[]
+			"optional_fields":[
+				{
+					"title":
+				},
+				{
+					"password":
+				},
+				{
+					"hint":
+				},
+				{
+					"monster":
+				}
+
+			]
 		},
 		{
 			"level_number": 2,
@@ -15,7 +29,20 @@
 			"num_chips": 1,
 			"upper_layer": [],
 			"lower_layer": [],
-			"optional_fields":[]
+			"optional_fields":[
+				{
+					"title":
+				},
+				{
+					"password":
+				},
+				{
+					"hint":
+				},
+				{
+					"monster":
+				}
+			]
 		}
 	]
 }
