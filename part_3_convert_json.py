@@ -22,6 +22,7 @@ def make_level_pack_from_json(json_data):
         newLevel.upper_layer = ccLevels["upper_layer"]
         newLevel.lower_layer = ccLevels["lower_layer"]
 
+        optional_fields_list = ccLevels["optional_fields"]
         for field in ccLevels["optional_fields"]: #References items in "optional_fields" data list
             #Title
             title_field = cc_classes.CCMapTitleField(field["title"])
@@ -42,7 +43,7 @@ def make_level_pack_from_json(json_data):
                 coordinate_field.append(monster_coordinate)
             monster_field = cc_classes.CCMonsterMovementField(coordinate_field)
             newLevel.add_field("monster_field")
-
+        newLevel.optional_fields = optional_fields_list
         level_pack.add_level(newLevel)
     return level_pack
 
