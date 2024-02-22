@@ -23,28 +23,31 @@ def make_level_pack_from_json(json_data):
         newLevel.lower_layer = ccLevels["lower_layer"]
 
         optional_fields_list = ccLevels["optional_fields"]
-        for field in ccLevels["optional_fields"]: #References items in "optional_fields" data list
+        for field in optional_fields_list: #References items in "optional_fields" data list
             #Title
-            title_field = cc_classes.CCMapTitleField(field["title"])
-            newLevel.add_field("title_field")
+            if "title" in field:
+                title_field = cc_classes.CCMapTitleField(field["title"])
+                newLevel.add_field(title_field)
 
             #Password
-            password_field = cc_classes.CCEncodedPasswordField(field["password"])
-            newLevel.add_field("password_field")
+            if "password" in field:
+                password_field = cc_classes.CCEncodedPasswordField(field["password"])
+                newLevel.add_field(password_field)
 
             #Hint
-            hint_field = cc_classes.CCMapHintField(field["hint"])
-            newLevel.add_field("hint_field")
+            if "hint" in field:
+                hint_field = cc_classes.CCMapHintField(field["hint"])
+                newLevel.add_field(hint_field)
 
             #Monster(s)
-            coordinate_field = []
-            for coordinate in field["monster"]:
-                monster_coordinate = cc_classes.CCCoordinate(coordinate["0"], coordinate["1"])
-                coordinate_field.append(monster_coordinate)
-            monster_field = cc_classes.CCMonsterMovementField(coordinate_field)
-            newLevel.add_field("monster_field")
+            if "monster" in field:
+                coordinate_field = []
+                for x,y in field["monster"]:
+                    monster_coordinate = cc_classes.CCCoordinate(x, y)
+                    coordinate_field.append(monster_coordinate)
+                monster_field = cc_classes.CCMonsterMovementField(coordinate_field)
+                newLevel.add_field(monster_field)
 
-        newLevel.optional_fields = optional_fields_list
         level_pack.add_level(newLevel)
     return level_pack
 
