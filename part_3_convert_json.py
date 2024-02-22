@@ -43,6 +43,7 @@ def make_level_pack_from_json(json_data):
                 coordinate_field.append(monster_coordinate)
             monster_field = cc_classes.CCMonsterMovementField(coordinate_field)
             newLevel.add_field("monster_field")
+
         newLevel.optional_fields = optional_fields_list
         level_pack.add_level(newLevel)
     return level_pack
